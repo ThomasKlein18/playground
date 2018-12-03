@@ -133,6 +133,19 @@ export class State {
     {name: "hideText", type: Type.BOOLEAN}
   ];
 
+  // MYCHANGE
+  private static HIDDEN_PROPERTIES: string[] = [
+    "activation",
+    "regularization",
+    "learningRate",
+    "regularizationRate",
+    "noise",
+    "percTrainData",
+    "discretize",
+    "problem",
+    "batchSize"
+  ];
+
   [key: string]: any;
   learningRate = 0.03;
   regularizationRate = 0;
@@ -168,12 +181,18 @@ export class State {
    * Deserializes the state from the url hash.
    */
   static deserializeState(): State {
+
     let map: {[key: string]: string} = {};
     for (let keyvalue of window.location.hash.slice(1).split("&")) {
       let [name, value] = keyvalue.split("=");
       map[name] = value;
     }
     let state = new State();
+
+    //MYCHANGE
+    for( let value of State.HIDDEN_PROPERTIES){
+      state.setHideProperty(value, true);
+    }
 
     function hasKey(name: string): boolean {
       return name in map && map[name] != null && map[name].trim() !== "";
