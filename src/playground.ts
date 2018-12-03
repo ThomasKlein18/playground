@@ -696,9 +696,9 @@ function addPlusMinusControl(x: number, layerIdx: number) {
       .attr("class", "material-icons")
       .text("remove");
 
-  let suffix = state.networkShape[i] > 1 ? "s" : "";
+  let suffix = state.networkShape[i] > 1 ? "en" : "";
   div.append("div").text(
-    state.networkShape[i] + " neuron" + suffix
+    state.networkShape[i] + " Neuron" + suffix
   );
 }
 
@@ -945,8 +945,8 @@ function reset(onStartup=false) {
   }
   player.pause();
 
-  let suffix = state.numHiddenLayers !== 1 ? "s" : "";
-  d3.select("#layers-label").text("Hidden layer" + suffix);
+  let suffix = state.numHiddenLayers !== 1 ? "en" : "";
+  d3.select("#layers-label").text("versteckte Schicht" + suffix);
   d3.select("#num-layers").text(state.numHiddenLayers);
 
   // Make a simple network.
@@ -1047,7 +1047,7 @@ function hideControls() {
         class: "mdl-checkbox__input",
       });
     if (hiddenProps.indexOf(id) === -1) {
-      input.attr("checked", "true");
+      input.attr("checked", "false"); // MYCHANGE
     }
     input.on("change", function() {
       state.setHideProperty(id, !this.checked);
