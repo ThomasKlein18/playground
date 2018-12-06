@@ -27,7 +27,8 @@ Hier können wir Ideen für die Erklärungstour durch den Playground sammeln.
 + two different modes: 
 ..+ explanations that appear when hovering over the respective parts of the site and 
 ..+ initial guided tour
-+ @Chris: What makes more sense, showing the tour as a series of screenshots in which everything is greyed out except for the relevant part or achieving that effect dynamically? I think the first option makes more sense because Gabi or I can do that, you'd just have to write code that handles displaying a series of images with three buttons (left, right and x)
++ @Chris: What makes more sense, showing the tour as a series of screenshots in which everything is grayed out except for the relevant part, or achieving that effect dynamically? I think the first option makes more sense because Gabi or I can do that, you'd just have to write code that handles displaying a series of images with three buttons (left, right and x)
 
 
 # Bonus: Intelligent Tour
++ figure out what sort of information people need as they are interacting with the screen
