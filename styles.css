@@ -56,7 +56,7 @@ body {
 }
 
 .l--body {
-  width: 550px;
+  width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -235,6 +235,12 @@ header h1 .optional {
   padding: 18px 0;
   box-shadow: 0 1px 4px rgba(0,0,0,0.08);
   background: white;
+}
+
+.hard_reset {
+  color: black;
+  font-style: normal;
+  font-size: medium;
 }
 
 @media (min-height: 700px) {
@@ -444,6 +450,7 @@ svg text {
 
 canvas {
   display: block;
+  text-align: right;
 }
 
 .link {
@@ -588,7 +595,7 @@ g.column rect {
 /* Features column */
 
 .features.column {
-  width: 15%; /* 10 */
+  width: 100px; /* 10% */
   position: relative;
 }
 

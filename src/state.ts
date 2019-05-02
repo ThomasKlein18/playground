@@ -39,7 +39,7 @@ export let datasets: {[key: string]: dataset.DataGenerator} = {
   "circle": dataset.classifyCircleData,
   "xor": dataset.classifyXORData,
   "gauss": dataset.classifyTwoGaussData,
-  "spiral": dataset.classifySpiralData,
+  //"spiral": dataset.classifySpiralData,
 };
 
 /** A map between dataset names and functions that generate regression data. */
@@ -143,7 +143,12 @@ export class State {
     "percTrainData",
     "discretize",
     "problem",
-    "batchSize"
+    "batchSize",
+    "xSquared",
+    "ySquared",
+    "xTimesY",
+    "sinX",
+    "sinY"
   ];
 
   [key: string]: any;

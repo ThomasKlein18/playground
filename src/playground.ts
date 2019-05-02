@@ -734,7 +734,7 @@ function updateHoverCard(type: HoverType, nodeOrLink?: nn.Node | nn.Link,
   let value = (type === HoverType.WEIGHT) ?
     (nodeOrLink as nn.Link).weight :
     (nodeOrLink as nn.Node).bias;
-  let name = (type === HoverType.WEIGHT) ? "Weight" : "Bias";
+  let name = (type === HoverType.WEIGHT) ? "Gewicht" : "Präferenz";
   hovercard.style({
     "left": `${coordinates[0] + 20}px`,
     "top": `${coordinates[1]}px`,

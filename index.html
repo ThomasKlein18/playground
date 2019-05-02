@@ -42,12 +42,12 @@ limitations under the License.
 </head>
 <body>
   <!-- GitHub link -->
-  <a class="github-link" href="https://github.com/tensorflow/playground" title="Source on GitHub" target="_blank">
+  <!--<a class="github-link" href="https://github.com/tensorflow/playground" title="Source on GitHub" target="_blank">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60.5 60.5" width="60" height="60">
       <polygon class="bg" points="60.5,60.5 0,0 60.5,0 "/>
       <path class="icon" d="M43.1,5.8c-6.6,0-12,5.4-12,12c0,5.3,3.4,9.8,8.2,11.4c0.6,0.1,0.8-0.3,0.8-0.6c0-0.3,0-1,0-2c-3.3,0.7-4-1.6-4-1.6c-0.5-1.4-1.3-1.8-1.3-1.8c-1.1-0.7,0.1-0.7,0.1-0.7c1.2,0.1,1.8,1.2,1.8,1.2c1.1,1.8,2.8,1.3,3.5,1c0.1-0.8,0.4-1.3,0.8-1.6c-2.7-0.3-5.5-1.3-5.5-5.9c0-1.3,0.5-2.4,1.2-3.2c-0.1-0.3-0.5-1.5,0.1-3.2c0,0,1-0.3,3.3,1.2c1-0.3,2-0.4,3-0.4c1,0,2,0.1,3,0.4c2.3-1.6,3.3-1.2,3.3-1.2c0.7,1.7,0.2,2.9,0.1,3.2c0.8,0.8,1.2,1.9,1.2,3.2c0,4.6-2.8,5.6-5.5,5.9c0.4,0.4,0.8,1.1,0.8,2.2c0,1.6,0,2.9,0,3.3c0,0.3,0.2,0.7,0.8,0.6c4.8-1.6,8.2-6.1,8.2-11.4C55.1,11.2,49.7,5.8,43.1,5.8z"/>
     </svg>
-  </a>
+  </a>-->
   <!-- Header -->
   <header>
     <h1 class="l--page">Probieren Sie es selbst: Trainieren Sie ein neuronales Netzwerk.<br>Keine Angst, Sie können nichts kaputt machen.</h1>
@@ -68,6 +68,9 @@ limitations under the License.
           <i class="material-icons">skip_next</i>
         </button>
       </div>
+      <!--<div class="control">
+        <span class="label" id="hard_reset"><a href="http://127.0.0.1:8080/">Alles zurücksetzen</a></span>
+      </div>-->
       <div class="control">
         <span class="label">Epoche</span>
         <span class="value" id="iter-number"></span>
@@ -151,16 +154,16 @@ limitations under the License.
       <div class="ui-dataset">
         <p>Welchen Datensatz möchten Sie benutzen?</p>
         <div class="dataset-list">
-          <div class="dataset" title="Circle">
+          <div class="dataset" title="Kreis">
             <canvas class="data-thumbnail" data-dataset="circle"></canvas>
           </div>
-          <div class="dataset" title="Exclusive or">
+          <div class="dataset" title="Exklusives Oder">
             <canvas class="data-thumbnail" data-dataset="xor"></canvas>
           </div>
-          <div class="dataset" title="Gaussian">
+          <div class="dataset" title="Gauss">
             <canvas class="data-thumbnail" data-dataset="gauss"></canvas>
           </div>
-          <div class="dataset" title="Spiral">
+          <div class="dataset" title="Spirale">
             <canvas class="data-thumbnail" data-dataset="spiral"></canvas>
           </div>
           <div class="dataset" title="Plane">
@@ -199,7 +202,7 @@ limitations under the License.
     <!-- Features Column -->
     <div class="column features">
       <h4>Eigenschaften</h4>
-      <p>Welche Merkmale möchten Sie dem Netzwerk übergeben?</p>
+      <p>Die Merkmale der Pflanzen.</p>
       <div id="network">
         <svg id="svg" width="510" height="450">
           <defs>
@@ -300,6 +303,7 @@ limitations under the License.
             <input type="checkbox" id="show-test-data" class="mdl-checkbox__input" checked>
             <span class="mdl-checkbox__label label">Zeige Test-Daten</span>
           </label>
+          <a href="http://127.0.0.1:8080/">Alles zurücksetzen</a>
           <label class="ui-discretize mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="discretize">
             <input type="checkbox" id="discretize" class="mdl-checkbox__input" checked>
             <span class="mdl-checkbox__label label">Discretize output</span>
@@ -322,23 +326,25 @@ limitations under the License.
   <article id="article-text">
     <div class="l--body">
       <h2>Was sehe ich hier?</h2>
-      <p>Auf dieser Seite können Sie selbst ein neuronales Netzwerk darauf trainieren, Objekte zu klassifizieren.</p>
+      <p>Auf dieser Seite können Sie selbst ein neuronales Netzwerk darauf trainieren, Objekte zu klassifizieren. Im hier gewählten Beispiel sind diese Objekte Pflanzen, die durch die Größe ihrer Blüten und durch die Länge ihrer
+        Blätter charakterisiert werden. Eine Pflanze ist entweder eine Alraune oder eine Drachenwurzel.
+      </p>
       <h2>Warum ist diese Technologie wichtig?</h2>
-      <p>Unser Professor Floralis mit seinen Orchideen ist zwar ein niedliches Beispiel, aber Orchideen erkennen zu können ist nicht besonders nützlich. 
-        Das Tolle an neuronalen Netzwerken ist jedoch, wie allgemein sie sind. Stellen Sie sich vor, wir hätten hier die Daten von Krebspatienten: Den Anteil ihrer weißen Blutkörperchen und ihren Blutzuckerspiegel. 
+      <p>Unser Beispiel ist kaum mehr als ein Spielzeug, aber neuronale Netzwerke funktionieren unabhängig von der inhaltlichen Bedeutung der Daten.
+        Stellen Sie sich vor, wir hätten hier die Daten von Krebspatienten: Den Anteil ihrer weißen Blutkörperchen und ihren Blutzuckerspiegel (oder was auch immer sonst Einfluss auf den Krankheitsverlauf nimmt). 
         Blaue Punkte sind Patienten, bei denen Behandlungsmethode A anschlägt, während bei orangenen Punkten Methode B besser funktioniert. 
         Für einen neuen Patienten könnten wir nun vorhersagen, welche Methode wir anwenden sollten. 
         Natürlich funktionieren neuronale Netzwerke nicht bloß mit zweidimensionalen Daten, sondern mit beliebig vielen Dimensionen. 
         Wir könnten also mit allen relevanten Informationen zum genetischen Profil arbeiten, mit Blutwerten und bekannten Erkrankungen, Allergien, Körpergewicht, Behandlungshistorie... 
         Außerdem können wir nicht bloß zwischen zwei Klassen unterscheiden wie im Beispiel, sondern zwischen beliebig vielen, und es gibt viele weitere Entscheidungen, die wir beim Design eines neuronalen Netzwerks treffen können. 
-        <b>Machen Sie sich die Tragweite dieser Eigenschaften bewusst: 
-          Wir können die implizit in den Daten vorhandenen Informationen ohne Vorschriften von außen nutzen. 
+        <b>
+          Wir können also die implizit in den Daten vorhandenen Informationen ohne Vorschriften von außen nutzen. 
           Ich muss als Forscher nichts über das inhaltliche Themengebiet (Orchideen oder Krebszellen) wissen, um korrekte Vorhersagen treffen zu können. 
           Das Netzwerk lernt Dinge von selbst.</b></p>
         
         <h2>Warum sollten wir neuronale Netzwerke erforschen?</h2>
         <p>Die Technologie funktioniert und hat ihren Wert schon unter Beweis gestellt, aber viele Fragen sind noch offen. 
-        Wir wissen zum Beispiel oft nicht, was im Inneren des Netzwerks passiert und worauf die Neuronen achten, wenn sie ihre Entscheidungsgrenze lernen. 
+        Wir wissen zum Beispiel fast nie, was im Inneren des Netzwerks passiert und worauf die Neuronen achten, wenn sie ihre Entscheidungsgrenze lernen. 
         Im Krebs-Beispiel: Wir wissen zwar, wie wir einen Patienten behandeln sollten, aber verstehen nicht, warum. 
         Welche Eigenschaften sind entscheidend für die Diagnose, und was sind die biologischen Gründe dafür? 
         Es ist noch viel Forschung nötig, bis wir diese Geheimnisse entschlüsseln können.</p>
