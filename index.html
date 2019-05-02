@@ -328,6 +328,11 @@ limitations under the License.
       <h2>Was sehe ich hier?</h2>
       <p>Auf dieser Seite können Sie selbst ein neuronales Netzwerk darauf trainieren, Objekte zu klassifizieren. Im hier gewählten Beispiel sind diese Objekte Pflanzen, die durch die Größe ihrer Blüten und durch die Länge ihrer
         Blätter charakterisiert werden. Eine Pflanze ist entweder eine Alraune oder eine Drachenwurzel.
+        Der Datensatz, den Sie links auswählen können, besteht aus Pflanzen. Zum Beispiel sind Alraunen orange und Drachenwurzeln blau. 
+        Die Position des Punktes im Koordinatensystem bestimmt die Eigenschaften der Pflanze: Je größer der Blütendurchmesser, desto weiter rechts ist der Punkt. Je länger die Blätter, desto weiter oben ist der Punkt. 
+        (Ein blauer Punkt in der Mitte des Koordinatensystems entspräche also einer Drachenwurzel mit durchschnittlich großer Blattlänge und durchschnittlich großem Blütendurchmesser.)
+        Wie Sie sehen, gibt es einen Zusammenhang zwischen der Position der Punkte und der Pflanzenart (es gibt klar erkennbare Haufen von Punkten, oder?). Dieser Zusammenhang kann sehr kompliziert sein, doch das neuronale Netzwerk, das Sie trainieren, kann den Zusammenhang lernen.
+        Das Netzwerk gibt rechts den Zusammenhang aus, den es gelernt hat. Wenn alle blauen Punkte auf blauem Grund liegen, und alle orangenen Punkte auf orangenem Grund, hat das System richtig funktioniert.
       </p>
       <h2>Warum ist diese Technologie wichtig?</h2>
       <p>Unser Beispiel ist kaum mehr als ein Spielzeug, aber neuronale Netzwerke funktionieren unabhängig von der inhaltlichen Bedeutung der Daten.
