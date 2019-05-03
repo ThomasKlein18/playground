@@ -2,7 +2,7 @@
 
 My adaptation of the official TensorFlow Playground, translated to german and reduced in complexity to suit the needs of our exhibition on the MS Wissenschaft.
 
-## Development
+## Deployment
 
 To run the visualization locally, run:
 - `npm i` to install dependencies
