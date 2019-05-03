@@ -34,4 +34,4 @@ Jedes Neuron kombiniert die gewichteten Entscheidungsgrenzen der Neuronen in den
 
 ### Ergebnis
 
-Ganz rechts sehen Sie die finale Entscheidungsgrenze, die das Netzwerk als Ganzes gelernt hat. Das Netzwerk funktioniert richtig, wenn alle orangenen Punkte in einem orangenen Bereich liegen und alle blauen Punkte in einem blauen Bereich. Der Trainingsfehler muss möglichst gering werden. Die Test-Daten sind die verloren gegangenen Daten, bei denen wir wirklich nicht wissen, zu welcher Pflanzenart sie gehören. 
+Ganz rechts sehen Sie die finale Entscheidungsgrenze, die das Netzwerk als Ganzes gelernt hat. Das Netzwerk funktioniert richtig, wenn alle orangenen Punkte in einem orangenen Bereich liegen und alle blauen Punkte in einem blauen Bereich. Der Trainingsfehler muss möglichst gering werden. Die Test-Daten sind unbekannte Daten, die das System im Training nie gesehen hat. Wenn es die korrekte Funktion gelernt hat, sollte es auch diese Test-Daten richtig klassifizieren.
